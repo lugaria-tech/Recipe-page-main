@@ -43,12 +43,15 @@ img {
 body {
   font-size: 16px;
   font-family: outfit-thin, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 /* Container settings */
 
 .container {
   background-color: hsl(0, 0, 100%);
+  width: 100%;
 }
 
 .container .wrapper {
@@ -58,6 +61,7 @@ body {
 .wrapper h2 {
   font-family: outfit;
   color: var(--Brown-800);
+  margin-bottom: 1rem;
 }
 
 .container .heading h1 {
@@ -75,11 +79,94 @@ body {
 }
 
 .prep-time h2 {
-  margin-bottom: 1rem;
   color: var(--Rose-800);
 }
 
 .prep-time ul {
   list-style-position: inside;
   padding: 0 1rem 1rem;
+}
+
+.instructios ol {
+  padding: 0 1rem 1rem;
+}
+
+.instructios ol ::marker {
+  font-family: outfit, sans-serif;
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+.instructios span {
+  font-family: outfit, sans-serif;
+  font-weight: 700;
+}
+
+.ingredients,
+.instructios,
+.nutrition {
+  padding: 1rem;
+}
+
+.ingredients ul {
+  padding-left: 1rem;
+}
+
+/* .ingredients ul li:nth-last-of-type(1) {
+  background-color: brown;
+} */
+
+.wrapper hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  content: "";
+  background-color: var(--Stone-600);
+}
+
+.nutrition table {
+  padding: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition table td {
+  padding-top: 1rem;
+}
+
+.nutrition tr {
+  border-bottom: 1px solid var(--Stone-600);
+}
+
+.nutrition tbody tr:nth-last-child(1) {
+  /* background-color: black; */
+  border: none;
+}
+
+.nutrition tbody tr td:nth-last-child(1) {
+  font-family: outfit;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    background-color: var(--Stone-150);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .container {
+    max-width: 600px;
+    background-color: #fff;
+    margin: 4rem 0;
+    border-radius: 14px;
+  }
+
+  .container .image {
+    padding: 1rem;
+  }
+
+  .container .image img {
+    border-radius: 10px;
+  }
 }
